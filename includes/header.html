@@ -1,0 +1,55 @@
+<header class="header">
+  <div class="header__inner">
+    <a class="logo" href="index.html" aria-label="Ember Stopper home">
+      <img src="assets/logo.png" alt="Ember Stopper logo">
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="about.html">About</a>
+      <div class="nav__item nav__item--services">
+        <button class="nav__link nav__services-toggle" type="button" aria-expanded="false" aria-controls="services-submenu">
+          Services
+          <svg class="nav__caret" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+          </svg>
+        </button>
+        <div class="nav__submenu" id="services-submenu">
+          <a class="nav__submenu-link" href="services.html">All Services</a>
+          <a class="nav__submenu-link" href="ember-stopper-home-cover-system.html">Ember Stopper Home Cover System</a>
+          <a class="nav__submenu-link" href="product-supply-delivery.html">Product Supply &amp; Delivery</a>
+          <a class="nav__submenu-link" href="installation-guidance-support.html">Installation Guidance &amp; Support</a>
+          <a class="nav__submenu-link" href="bushfire-preparedness-consulting.html">Bushfire Preparedness Consulting</a>
+          <a class="nav__submenu-link" href="property-risk-assessment.html">Property Risk Assessment</a>
+        </div>
+      </div>
+      <a class="nav__link" href="contact.html">Contact</a>
+      <a class="nav__cta" href="tel:+61414345755" data-phone-display>0414 345 755</a>
+    </nav>
+
+    <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/>
+      </svg>
+    </button>
+  </div>
+
+  <aside class="nav-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+    <a class="nav__mobile-link" href="index.html">Home</a>
+    <a class="nav__mobile-link" href="about.html">About</a>
+    <div class="nav__mobile-services">
+      <button class="nav__mobile-link nav__mobile-services-toggle" type="button" aria-expanded="false" aria-controls="mobile-services-submenu">Services</button>
+      <div class="nav__mobile-submenu" id="mobile-services-submenu">
+        <a class="nav__mobile-sublink" href="services.html">All Services</a>
+        <a class="nav__mobile-sublink" href="ember-stopper-home-cover-system.html">Ember Stopper Home Cover System</a>
+        <a class="nav__mobile-sublink" href="product-supply-delivery.html">Product Supply &amp; Delivery</a>
+        <a class="nav__mobile-sublink" href="installation-guidance-support.html">Installation Guidance &amp; Support</a>
+        <a class="nav__mobile-sublink" href="bushfire-preparedness-consulting.html">Bushfire Preparedness Consulting</a>
+        <a class="nav__mobile-sublink" href="property-risk-assessment.html">Property Risk Assessment</a>
+      </div>
+    </div>
+    <a class="nav__mobile-link" href="contact.html">Contact</a>
+    <a class="nav__mobile-cta" href="tel:+61414345755">Call 0414 345 755</a>
+  </aside>
+  <div class="nav-overlay" aria-hidden="true"></div>
+</header>
