@@ -72,6 +72,16 @@ p { margin: 0 0 1rem; }
 .nav__link { text-decoration: none; color: rgba(var(--color-secondary-rgb), 0.75); font-weight: 600; transition: color var(--transition-base); }
 .nav__link:hover,.nav__link.active { color: var(--color-secondary); }
 .nav__item { position: relative; }
+/* Bridge the gap between trigger and .nav__submenu (top: calc(100% + 0.7rem)) so :hover is not lost while moving to links */
+.nav__item--services::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: max(100%, 290px);
+  height: 0.85rem;
+  z-index: 1;
+}
 .nav__services-toggle { display: inline-flex; align-items: center; gap: 0.2rem; background: transparent; border: 0; font: inherit; cursor: pointer; padding: 0; }
 .nav__caret { transition: transform var(--transition-base); }
 .nav__item--services.is-open .nav__caret { transform: rotate(180deg); }
@@ -91,6 +101,7 @@ p { margin: 0 0 1rem; }
   transform: translateY(-8px);
   pointer-events: none;
   transition: opacity var(--transition-base), transform var(--transition-base);
+  z-index: 2;
 }
 .nav__item--services.is-open .nav__submenu,
 .nav__item--services:hover .nav__submenu {
