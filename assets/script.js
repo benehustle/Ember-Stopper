@@ -252,8 +252,6 @@ function initContactForm() {
   if (!form) return;
 
   const successEl = document.getElementById("formSuccess");
-  const phoneEl = document.querySelector("[data-phone-display]");
-  const phoneText = phoneEl ? phoneEl.textContent.trim() : "";
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -264,7 +262,8 @@ function initContactForm() {
     form.reset();
     if (successEl) {
       successEl.hidden = false;
-      successEl.textContent = `Thanks — we'll be in touch soon! For urgent jobs call ${phoneText} directly.`;
+      successEl.textContent =
+        "Thanks — we'll be in touch soon! For urgent enquiries you can email info@emberstopper.com.";
     }
   });
 }

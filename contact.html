@@ -14,20 +14,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Ember Stopper","telephone":"+61414345755","email":"ftauakipulu@outlook.com","address":{"@type":"PostalAddress","streetAddress":"139 Graceville Avenue","addressLocality":"Graceville","addressRegion":"QLD","postalCode":"4075","addressCountry":"AU"},"areaServed":"Worldwide","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Ember Stopper","url":"https://emberstopper.com","email":"info@emberstopper.com","areaServed":"Worldwide"}</script>
 </head>
 <body>
   <a href="#main" class="sr-only">Skip to main content</a>
   <div id="header-placeholder"></div>
   <main id="main">
-    <section class="hero hero--page hero--contact"><div class="hero__bg"></div><div class="hero__overlay"></div><div class="container"><div class="hero__content"><p class="hero__badge">Get a Fast Quote Response</p><h1 class="hero__headline">Wildfire Protection Support in <span class="gradient-text">Worldwide</span></h1><p class="hero__subheadline">Tell us about your property and we will help you map out practical wildfire protection and deployment steps.</p><div class="hero__cta-group"><a class="btn btn--primary" href="tel:+61414345755">Call Us Today - Free Quote</a><a class="btn btn--secondary" href="#contactForm">Get a Free Quote</a></div></div></div></section>
+    <section class="hero hero--page hero--contact"><div class="hero__bg"></div><div class="hero__overlay"></div><div class="container"><div class="hero__content"><p class="hero__badge">Get a Fast Quote Response</p><h1 class="hero__headline">Wildfire Protection Support in <span class="gradient-text">Worldwide</span></h1><p class="hero__subheadline">Tell us about your property and we will help you map out practical wildfire protection and deployment steps.</p><div class="hero__cta-group"><a class="btn btn--primary" href="mailto:info@emberstopper.com">Email info@emberstopper.com</a><a class="btn btn--secondary" href="#contactForm">Get a Free Quote</a></div></div></div></section>
     <section class="section"><div class="container contact-grid">
       <div class="animate-on-scroll">
         <h2>Request a Quote</h2>
         <form id="contactForm" novalidate>
           <label for="name">Name</label><input id="name" name="name" type="text" required>
           <label for="email">Email</label><input id="email" name="email" type="email" required>
-          <label for="phone">Phone</label><input id="phone" name="phone" type="tel" required>
+          <label for="phone">Phone <span class="muted">(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel">
           <label for="service">Service</label>
           <select id="service" name="service" required>
             <option value="">Select a service</option>
@@ -44,16 +44,14 @@
       </div>
       <aside class="panel animate-on-scroll">
         <h3>Contact Details</h3>
-        <p><strong>Phone:</strong> <a href="tel:+61414345755">0414 345 755</a></p>
-        <p><strong>Email:</strong> <a href="mailto:ftauakipulu@outlook.com">ftauakipulu@outlook.com</a></p>
-        <p><strong>Address:</strong> 139 Graceville Avenue, Graceville QLD 4075</p>
+        <p><strong>Email:</strong> <a href="mailto:info@emberstopper.com">info@emberstopper.com</a></p>
         <p><strong>Service Region:</strong> Worldwide</p>
         <p><strong>Ideal Clients:</strong> Homeowners in bushfire and wildfire prone areas.</p>
       </aside>
     </div></section>
   </main>
   <div id="footer-placeholder"></div>
-  <div class="call-bar"><div class="call-bar__inner"><a class="call-bar__left" href="tel:+61414345755"><span class="call-bar__icon-wrap"><span class="call-bar__pulse"></span><svg class="call-bar__icon" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8c1.8 3.5 3.1 4.8 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.2 1.3.5 2.7.8 4.1.8.7 0 1.3.6 1.3 1.3V21c0 .7-.6 1.3-1.3 1.3C10 22.3 1.7 14 1.7 3.7 1.7 3 2.3 2.4 3 2.4h3.9c.7 0 1.3.6 1.3 1.3 0 1.4.3 2.8.8 4.1.1.4.1.9-.2 1.2z"/></svg></span><span class="call-bar__text"><small>Call Ember Stopper</small><strong>0414 345 755</strong></span></a><button class="call-bar__dismiss" type="button" aria-label="Dismiss call bar">Dismiss</button></div></div>
+  <div class="call-bar" aria-label="Mobile quick contact"><div class="call-bar__inner"><a class="call-bar__left" href="mailto:info@emberstopper.com"><span class="call-bar__icon-wrap"><svg class="call-bar__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></span><span class="call-bar__text"><small>Email Ember Stopper</small><strong>info@emberstopper.com</strong></span></a><button class="call-bar__dismiss" type="button" aria-label="Dismiss contact bar">Dismiss</button></div></div>
   <script src="assets/script.js"></script>
 </body>
 </html>

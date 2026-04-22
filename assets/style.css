@@ -251,6 +251,8 @@ textarea { min-height: 140px; resize: vertical; }
 @media (max-width: 980px) { .cards-grid > * { flex: 0 0 calc(50% - 0.625rem); max-width: calc(50% - 0.625rem); } .stats-grid,.why-grid,.locations-grid,.values-grid,.benefits-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .split,.contact-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 640px) { .section { padding: 3.75rem 0; } .cards-grid > * { flex: 0 0 100%; max-width: 100%; } .stats-grid,.why-grid,.locations-grid,.values-grid,.benefits-grid,.footer-grid,.hero__trust-bar { grid-template-columns: 1fr; } .logo img { height: 46px; } }
 .hero--home .hero__bg { background-image: url("hero-home.png"); background-position: center; }
+/* Slightly stronger overlay on busy ember photography for headline contrast */
+.hero--home .hero__overlay { background: linear-gradient(135deg, rgba(var(--color-secondary-rgb), 0.94) 0%, rgba(var(--color-secondary-rgb), 0.76) 42%, rgba(var(--color-secondary-rgb), 0.58) 100%); }
 .hero--about .hero__bg { background-image: url("header-0.png"); background-position: center 30%; }
 .hero--services .hero__bg { background-image: url("header-1.png"); background-position: center 45%; }
 .hero--contact .hero__bg { background-image: url("header-2.png"); background-position: center 55%; }
