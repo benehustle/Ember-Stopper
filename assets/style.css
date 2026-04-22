@@ -172,8 +172,14 @@ p { margin: 0 0 1rem; }
 @media (max-width: 640px) { .wave-divider { height: 40px; } }
 .wave-divider--white { color: var(--color-white); }
 .wave-divider--light { color: var(--color-bg-alt); }
+/* Light section → white: strip matches grey above, wave is white (avoids transparent gap looking “inverted”) */
+.wave-divider--from-light { background-color: var(--color-bg-alt); color: var(--color-white); }
+/* White section → light grey: strip matches white above, wave is grey */
+.wave-divider--from-white { background-color: var(--color-white); color: var(--color-bg-alt); }
 .wave-divider--dark { color: var(--color-secondary); }
 .wave-divider--primary { color: var(--color-primary); }
+/* Dark→orange: path matches navy; orange fills SVG gaps so no white band before CTA */
+.wave-divider--to-cta { background: var(--color-primary); color: var(--color-secondary); }
 .animate-on-scroll,.animate-stagger > * { opacity: 0; transform: translateY(30px); transition: opacity 0.5s cubic-bezier(0.4,0,0.2,1), transform 0.5s cubic-bezier(0.4,0,0.2,1); }
 .animate-on-scroll.is-visible,.animate-stagger > *.is-visible { opacity: 1; transform: translateY(0); }
 @media (prefers-reduced-motion: reduce) { .animate-on-scroll,.animate-stagger > * { opacity: 1; transform: none; transition: none; } }
