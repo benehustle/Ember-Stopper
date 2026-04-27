@@ -24,18 +24,31 @@
     <section class="section"><div class="container contact-grid">
       <div class="animate-on-scroll">
         <h2>Request a Quote</h2>
-        <form id="contactForm" novalidate>
+        <form
+          id="contactForm"
+          name="quote"
+          method="POST"
+          action="/"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          novalidate
+        >
+          <input type="hidden" name="form-name" value="quote" />
+          <p class="hp-field" aria-hidden="true">
+            <label for="hs-quote">Do not complete</label>
+            <input id="hs-quote" name="bot-field" type="text" autocomplete="off" tabindex="-1" />
+          </p>
           <label for="name">Name</label><input id="name" name="name" type="text" required>
           <label for="email">Email</label><input id="email" name="email" type="email" required>
           <label for="phone">Phone <span class="muted">(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel">
           <label for="service">Service</label>
           <select id="service" name="service" required>
             <option value="">Select a service</option>
-            <option>Ember Stopper Home Cover System</option>
-            <option>Product Supply &amp; Delivery</option>
-            <option>Installation Guidance &amp; Support</option>
-            <option>Bushfire Preparedness Consulting</option>
-            <option>Property Risk Assessment</option>
+            <option value="Ember Stopper Home Cover System">Ember Stopper Home Cover System</option>
+            <option value="Product Supply &amp; Delivery">Product Supply &amp; Delivery</option>
+            <option value="Installation Guidance &amp; Support">Installation Guidance &amp; Support</option>
+            <option value="Bushfire Preparedness Consulting">Bushfire Preparedness Consulting</option>
+            <option value="Property Risk Assessment">Property Risk Assessment</option>
           </select>
           <label for="message">Message</label><textarea id="message" name="message" required></textarea>
           <button class="btn btn--primary" type="submit">Send Quote Request</button>

@@ -226,6 +226,8 @@ label { font-weight: 600; }
 input,select,textarea { width: 100%; border: 1px solid var(--color-border); border-radius: 0.65rem; padding: 0.8rem; font: inherit; }
 textarea { min-height: 140px; resize: vertical; }
 .form-success { margin-top: 0.5rem; color: var(--color-secondary); font-weight: 600; }
+/* Netlify honeypot (leave off-screen, do not display:none so bots may still "see" it) */
+.hp-field { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
 .footer { background: var(--color-secondary); color: var(--color-white); padding-top: 4rem; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1.5fr; gap: 1.2rem; }
 .footer h3 { color: var(--color-white); margin-bottom: 0.75rem; }

@@ -246,12 +246,14 @@ function initCallBar() {
   }
 }
 
-// 8) initContactForm()
+// 8) initContactForm() — Netlify Forms: https://docs.netlify.com/manage/forms/setup/
 function initContactForm() {
   const form = document.getElementById("contactForm");
   if (!form) return;
 
   const successEl = document.getElementById("formSuccess");
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const action = form.getAttribute("action") || "/";
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -259,12 +261,35 @@ function initContactForm() {
       form.reportValidity();
       return;
     }
-    form.reset();
-    if (successEl) {
-      successEl.hidden = false;
-      successEl.textContent =
-        "Thanks — we'll be in touch soon! For urgent enquiries you can email info@emberstopper.com.";
-    }
+
+    const formData = new FormData(form);
+    if (submitBtn) submitBtn.disabled = true;
+    if (successEl) successEl.hidden = true;
+
+    fetch(action, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Form submission failed");
+        form.reset();
+        if (successEl) {
+          successEl.hidden = false;
+          successEl.textContent =
+            "Thanks — we'll be in touch soon! For urgent enquiries you can email info@emberstopper.com.";
+        }
+      })
+      .catch(() => {
+        if (successEl) {
+          successEl.hidden = false;
+          successEl.textContent =
+            "Something went wrong. Please try again or email info@emberstopper.com directly.";
+        }
+      })
+      .finally(() => {
+        if (submitBtn) submitBtn.disabled = false;
+      });
   });
 }
 
